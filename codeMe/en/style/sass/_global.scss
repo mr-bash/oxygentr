@@ -1,0 +1,92 @@
+/* Start Global */
+
+* 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body 
+{
+  font-family: 'Hind';
+  & > section
+  {
+    margin: 35px 0;
+  }
+}
+
+ul, ol 
+{
+  list-style: none;
+}
+
+a,
+a:hover 
+{
+  text-decoration: none!important;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.title
+  {
+    margin-bottom: 50px;
+    text-align: center;
+    display: inline-block;
+    color: $colorH2;
+    text-transform: uppercase;
+    h2
+    {
+      font-size: 30px;
+    }
+    span
+    {
+      position: relative;
+      display: block;
+      font: {
+        size: 20px;
+        family: monospace;
+      }
+      letter-spacing: -2px;
+      &::after,
+      &::before
+      {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 38%;
+        height: 0.19px;
+        background-color: $colorH2;
+      }
+      &::after
+      {
+        right: 0;
+      }
+      &::before
+      {
+        left: 2px;
+      }
+    }
+  }
+
+  p.description
+  {
+    font-size: 18px;
+    line-height: 1.7;
+    color: $colorP;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    @include scrMed 
+    {
+      width: 90%;
+    }
+  }
+
+/* End Global */

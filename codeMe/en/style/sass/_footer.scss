@@ -1,0 +1,80 @@
+/* Start Footer */
+footer
+{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#21a2da+0,424694+52 */
+  background: #21a2da; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(right,  #21a2da 0%,#424694 52%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear,  right top, left top,  from(#21a2da),color-stop(52%, #424694));
+  background: -o-linear-gradient(right,  #21a2da 0%,#424694 52%);
+  background: linear-gradient(to left,  #21a2da 0%,#424694 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21a2da', endColorstr='#424694',GradientType=1 ); /* IE6-9 */
+  height: 48px;
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+  overflow: hidden;
+  .footer-social-media
+  {
+    float: #{$left};
+    @include scrMed {
+      display: none;
+    }
+    a
+    {
+      text-decoration: none;
+      color: #FFF;
+      margin: 0 5px;
+      line-height: 48px;
+      padding: 0 5px;
+      text-align: center;
+      display: inline-block;
+      @include transition(1);
+      @include scrMed {
+        margin: 0;
+        &:last-of-type
+        {
+          padding: 0 8px;
+          text-align: center
+        }
+      }
+      &:hover
+      {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#21a2da+0,424694+52 */
+        background: #21a2da; /* Old browsers */ /* FF3.6-15 */
+        background: -webkit-linear-gradient(right,  #2694cf 0%,#37a4e0 52%); /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear,  right top, left top,  from(#2694cf),color-stop(52%, #37a4e0));
+        background: -o-linear-gradient(right,  #2694cf 0%,#37a4e0 52%);
+        background: linear-gradient(to left,  #2694cf 0%,#37a4e0 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21a2da', endColorstr='#424694',GradientType=1 ); /* IE6-9 */
+      }
+    }
+  }
+  p
+  {
+    line-height: 48px;
+    display: inline-block;
+    margin-#{$left}: -70px;
+    font-size: 15px;
+    @include scrMed {
+      font-size: 14px;
+      margin-#{$left}: -85px;
+    }
+
+    @include scrSm {
+      float: $left;
+      margin-#{$left}: 0;
+    }
+  }
+  .box-logo
+  {
+    position: relative;
+    top: -57px;
+    float: #{$right};
+    img
+    {
+      width: 70px;
+    }
+  }
+}
+
+/* End Footer */

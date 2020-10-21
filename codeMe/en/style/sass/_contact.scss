@@ -1,0 +1,171 @@
+/* Start Contact */
+.contact
+{
+  text-align: center;
+  padding: 30px 0;
+  .container-contact
+  {
+    text-align: #{$left};
+    margin: 30px 0;
+    @include boxShadow();
+    padding: 50px 20px 30px;
+    .form,
+    .info
+    {
+      @include prefix(box-shadow, 1px 1px 8px -6px #747171);
+      padding: 50px 20px 30px;
+      @include scrMed {
+        @include prefix(box-shadow, 1px 1px 8px -8px #747171);
+      }
+    }
+    .form
+    {
+      label
+      {
+        font-size: 17px;
+        color: #333;
+        span
+        {
+          color: rgb(248, 74, 74);
+          position: relative;
+          top: 4px;
+        }
+      }
+      input,
+      textarea
+      {
+        color: #333;
+      }
+      textarea
+      {
+        height: 110px;
+        max-height: 110px;
+        min-height: 110px;
+      }
+      input::placeholder,
+      textarea::placeholder
+      {
+        font-size: 14px;
+        color: rgb(139, 138, 138);
+      }
+      .container-btn
+      {
+        position: relative;
+        display: inline-block;
+        @include scrMed {
+          display: block;
+        }
+        &:hover::after,
+        &:hover
+        {
+          color: $blue;
+        }
+        &::after
+        {
+          content: "\f1d8";
+          font-family: "Font Awesome 5 Free";
+          position: absolute;
+          top: 50%;
+          #{$left}: 54.6%;
+          -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+          font-size: 10.5px;
+          color: #FFF;
+          @include scrMed {
+            #{$left}: 54.6%;
+          }
+          @include scrMinMed {
+            #{$left}: 66.6%;
+          }
+        }
+        input.btn-send
+        {
+          @include button(white);
+          padding: 4px 33px 4px 20px;
+          @include transition(.1);
+          cursor: pointer;
+          display: block;
+          @include scrMed {
+            margin: 10px auto;
+            padding: 4px 33px 4px 18px;
+          }
+        }
+      }
+    }
+    .info
+    {
+      @include scrMed {
+        margin: 20px 0;
+      }
+      .info-contact
+      {
+        @include prefix(box-shadow, 1px 1px 8px -5px #747171);
+        padding: 20px;
+        div
+        {
+          color: rgb(107, 106, 106);
+          margin: 10px 0;
+          i
+          {
+            margin-right: 9px;
+          }
+          a
+          {
+            color: rgb(107, 106, 106);
+          }
+        }
+      }
+      .social-media
+      {
+        padding: 20px;
+        margin: 80px 0 0;
+        @include scrLarg {
+          padding: 20px;
+          margin: 25px 0;
+        }
+        div
+        {
+          margin: 20px 0;
+          width: 100%;
+          text-align: center;
+          @include scrLarg {
+            margin: 0;
+          }
+          a
+          {
+            display: inline-block;
+            width: 49%;
+            padding: 0;
+            margin: 0;
+            height: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            color: rgb(107, 106, 106);
+            @include prefix(box-shadow, 1px 1px 8px -5px #747171);
+            &.face:hover
+            {
+              background-color: #516fa3;
+              color: #FFF;
+            }
+            &.insta:hover
+            {
+              background-color: #dc3e81;
+              color: #FFF;
+            }
+            &.twitter:hover
+            {
+              background-color: #4eb8ec;
+              color: #FFF;
+            }
+            &.tube:hover
+            {
+              background-color: #bb413e;
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* End Contact */

@@ -1,0 +1,86 @@
+/* Start Statistes */
+
+.statistes
+{
+  margin: 50px 0;
+  padding: 72px 0 55px;
+  @include boxShadow();
+  .box-card
+  {
+    color: #3b3b3b;
+    text-align: center;
+    @include boxShadow();
+    padding: 10px 0;
+    position: relative;
+    background-color: #FFF;
+    @include scrMed 
+    {
+      margin: 10px 0;
+    }
+    img
+    {
+      width: 50px;
+      display: block;
+      text-align: center;
+      margin: 20px auto 0;
+    }
+    span:not(:first-of-type)
+    {
+      display: block;
+      font-size: 18px;
+    }
+    .countup
+    {
+      font: {
+        size: 28px;
+        weight: 400;
+        family: "29LT Bukra";
+      }
+    }
+    strong
+    {
+      font-weight: 400;
+      font-size: 26px;
+    }
+  }
+  .pos1
+  {
+    left: 65px;
+    @include scrMed 
+    {
+      left: 0;
+    }
+  }
+  .pos2
+  {
+    left: 20px;
+    top: -20px;
+    @include scrMed 
+    {
+      left: 0;
+      top: 0;
+    }
+  }
+  .pos3
+  {
+    right: 20px;
+    z-index: -1;
+    @include scrMed 
+    {
+      right: 0;
+      z-index: auto;
+    }
+  }
+  .pos4
+  {
+    right: 65px;
+    top: -20px;
+    @include scrMed 
+    {
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+/* End Statistes */

@@ -1,0 +1,326 @@
+@import 'variables';
+@import 'mixins';
+
+
+$right: left;
+$left: right;
+
+body
+{
+  font-family: 'Omar';
+}
+
+header
+{
+  .top-nav
+  {
+    .brand
+    {
+      float: left;
+    }
+    .social-media
+    {
+      float: left;
+      transform: translateY(7px);
+      a
+      {
+        line-height: 23px;
+      }
+    }
+    .blockquote
+    {
+      margin-top: 5px;
+    }
+    .call-direct
+    {
+      position: fixed;
+      bottom: 50px;
+      left: auto;
+      right: 33px;
+      z-index: 9999999999999;
+      opacity: 0.9;
+      background: #6cb463;
+      display: block;
+      height: 55px;
+      width: 55px;
+      line-height: 42px;
+      font-size: 37px;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      -webkit-transition: .1s ease-in-out;
+      -o-transition: .1s ease-in-out;
+      transition: .1s ease-in-out;
+      @include scrMed 
+      {
+        height: 40px;
+        width: 40px;
+        line-height: 28px;
+        font-size: 32px;
+        bottom: 110px;
+        right: auto;
+        left: 5px;
+      }
+      a
+      {
+        text-decoration: none;
+        color: #FFF;
+      }
+      &:hover
+      {
+        cursor: pointer;
+        color: #1dc241;
+        opacity: 1;
+      }
+    }
+  }
+  .cover 
+  {
+    .box-content
+    {
+      top: 46%;
+      left: 49%;
+      h1
+      {
+        text-align: right;
+        font-weight: 400;
+        span
+        {
+          padding: 5px 5px 18px;
+        }
+      }
+      p
+      {
+        text-align: justify;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        font-size: 19px;
+      }
+      a
+      {
+        padding: 0px 28px 3px;
+      } 
+    }
+  }
+}
+
+.about
+{
+  .text-about .bars-about
+  {
+    text-align: right;
+  }
+
+  .video .box-img .overlay
+  {
+    right: auto;
+    left: 50%;
+  }
+
+  .text-about .bars-about span
+  {
+    padding: 0;
+    padding-right: 20px;
+  }
+
+  .container-btn
+  {
+    text-align: right;
+    margin-top: 35px;
+    a
+    {
+      padding: 0px 28px 3px;
+    }
+  }
+}
+
+.services
+{
+  .container-items
+  {
+    .services-type .box-img
+    {
+      float: right;
+      transform: translateY(35px);
+    }
+
+    .services-type p
+    {
+      float: left;
+      line-height: 1.7;
+    }
+
+    .services-type
+    {
+      height: 175px;
+      overflow: hidden;
+      @include scrMed {
+        height: auto;
+      }
+      .box-img
+      {
+        @include scrMed {
+          float: none;
+        }
+      }
+    }
+
+    .container-btn
+    {
+      a
+      {
+        padding: 0px 28px 3px;
+      }
+    }
+
+  }
+}
+
+.works
+{
+  .container-items
+  {
+    aside ul li span i
+    {
+      left: auto;
+      right: 15%;
+      top: 55%;
+    }
+    .container-projects .box-project a
+    {
+      @include scrMed {
+        width: 170px;
+        padding: 7px 8px 8px;
+      }
+    }
+  }
+}
+
+.statistes
+{
+  .pos1
+  {
+    left: auto;
+    right: 65px;
+    @include scrMed {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  .pos2
+  {
+    left: auto;
+    right: 20px;
+    @include scrMed {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  .pos3
+  {
+    right: auto;
+    left: 20px;
+    @include scrMed {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  .pos4
+  {
+    right: auto;
+    left: 65px;
+    @include scrMed {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+.contact
+{
+  .form-group
+  {
+    text-align: right;
+    input
+    {
+      text-align: right;
+    }
+  }
+  .container-contact .info .info-contact div
+  {
+    text-align: right;
+    i
+    {
+      margin-left: 9px;
+    }
+  }
+  .container-contact .form .container-btn
+  {
+    display: block;
+    text-align: right;
+    &::after
+    {
+      left: 95.6%;
+      top: 15px;
+      @include scrMed {
+        left: 54%;
+        top: 17px;
+      }
+    }
+    input.btn-send
+    {
+      padding: 3px 35px 8px 20px;
+      font-size: 15px;
+    }
+  }
+  
+}
+
+.group-brands
+{
+  .group-brands div.box-img
+  {
+    @include scrXLarg {
+      &:first-of-type
+      {
+        width: 138px;
+        height: 55px;
+      }
+      &:nth-of-type(2)
+      {
+        width: 152px;
+        height: 58px;
+      }
+      &:nth-of-type(3)
+      {
+        width: 149px;
+        height: 59px;
+      }
+      &:nth-of-type(4)
+      {
+        width: 148px;
+        height: 61px;
+      }
+      &:nth-of-type(5)
+      {
+        width: 148px;
+        height: 62px;
+      }
+    }
+  }
+  div.box-img:not(:last-of-type)
+  {
+    margin-right: 0;
+    margin-left: 35px;
+    opacity: .7;
+    @include scrMed {
+      margin-left: 10px;
+    }
+    @include scrLarg {
+      margin-left: 20px;
+    }
+  }
+}

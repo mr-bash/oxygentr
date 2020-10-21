@@ -1,0 +1,213 @@
+//*
+// **  Media Query Mixin For Help Only
+//*
+
+@mixin scrXLarg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin scrLarg {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin scrMinLarg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin scrMed {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin scrMinMed {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin scrSm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+//*
+// **  Mixin Overlay
+//*
+
+@mixin overlay($zIndex, $color, $opc) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: $zIndex;
+  background: rgba($color, $opc);
+}
+
+//*
+// **  Mixin Background Image
+//*
+
+@mixin bg($url, $position) {
+  background: url(#{$url});
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//*
+// **  Mixin Prefixer
+//*
+
+@mixin prefix($prop, $value) {
+  -webkit-#{$prop}: $value;
+  -moz-#{$prop}: $value;
+  -o-#{$prop}: $value;
+  -ms-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+//*
+// **  Mixin Transition
+//*
+
+@mixin transition($value) {
+  @include prefix(transition, #{$value}s ease-in-out);
+}
+
+
+//*
+// **  Mixin Opacity
+//*
+
+@mixin opc($value) {
+  zoom: 1;
+  $opc-ie: $value * 100;
+  filter: alpha(opacity = $opc-ie);
+  opacity: $value;
+}
+
+
+//*
+// **  Mixin Animation
+//*
+
+@mixin animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+//*
+// **  Mixin Background Global Gradient
+//*
+@mixin colorGr {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#56421f+0,5e305d+100 */
+background: rgb(86,66,31); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(86,66,31,1) 0%, rgba(94,48,93,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(86,66,31,1) 0%,rgba(94,48,93,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(86,66,31,1) 0%,rgba(94,48,93,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56421f', endColorstr='#5e305d',GradientType=0 ); /* IE6-9 */
+
+}
+
+//*
+// **  Mixin Background Global Gradient
+//*
+@mixin button($type) {
+
+  @if $type == "white" {
+    color: #282828;
+    background-color: #FFF;
+    &:hover
+    {
+      background-color: #282828;
+      color: #FFF;
+    }
+  } @else {
+    color: #FFF;
+    background-color: $blue;
+    border: 1px solid $blue;
+    &:hover
+    {
+      background-color: #FFF;
+      color: $blue;
+    }
+  }
+  text-decoration: none;
+  padding: 4px 22px;
+  border-radius: 4px;
+  @include transition(.1);
+  @include scrMed 
+  {
+    padding: 2px 20px;
+    font-size: 15px;
+  }
+
+}
+
+//*
+// **  Mixin Box Shadow
+//*
+
+@mixin boxShadow {
+  @include prefix(box-shadow, 1px 1px 8px -4px #747171);
+}
+
+//*
+// **  Mixin Center Element Position Absolute 
+//*
+
+@mixin posCenter($width, $height) {
+  position: absolute;
+  @if $width == "" {
+    width: 100%;
+  } @else {
+    width: $width;
+  }
+
+  @if $width == "" {
+    height: 100%;
+  } @else {
+    height: $height;
+  }
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+//*
+// **  Mixin Keyframe Animation
+//*
+
+@mixin animate($name) {
+  @-webkit-keyframes #{$name} {
+      @content;
+  }
+
+  @-moz-keyframes #{$name} {
+      @content;
+  }
+
+  @-o-keyframes #{$name} {
+      @content;
+  }
+
+  @keyframes #{$name} {
+      @content;
+  }
+}

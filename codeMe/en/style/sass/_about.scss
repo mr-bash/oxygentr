@@ -1,0 +1,249 @@
+/* Start About */
+
+.about
+{
+  text-align: center;
+  position: relative;
+  p.description
+  {
+    text-align: justify;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .text-about
+  {
+    text-align: #{$left};
+    .bars-about
+    {
+      @include boxShadow();
+      margin: 20px 0;
+      line-height: 44px;
+      color: #6e6d6d;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      &:first-of-type p
+      {
+        display: block;
+      }
+      span
+      {
+        display: block;
+        padding-#{$left}: 20px;
+        cursor: pointer;
+        @include transition(.1);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        &:hover,
+        &.active,
+        &:hover i,
+        &.active i
+        {
+          background-color: #575757;
+          color: #FFF;
+        }
+        img
+        {
+          width: 18px;
+        }
+        i
+        {
+          margin-#{$right}: 8px;
+          color: #6e6d6d;
+          font-size: 14px;
+          @include transition(.1);
+        }
+      }
+      p
+      {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $colorP;
+        display: none;
+      }
+    }
+    .container-btn
+    {
+      @include scrMed 
+      {
+        text-align: center;
+      }
+      a
+      {
+        @include button(blue);
+      }
+    }
+  }
+  .video
+  {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    .layer
+    {
+      position: absolute;
+      width: 88%;
+      height: 95%;
+      background-color: #FFF;
+      @include boxShadow();
+      &:first-of-type
+      {
+        right: 57px;
+        top: -3px;
+        z-index: 1;
+      }
+      &:nth-of-type(2)
+      {
+        left: 25px;
+        top: -15px;
+        z-index: 2;
+        width: 90%;
+      }
+    }
+    .box-img
+    {
+      padding: 0.5%;
+      background-color: #FFF;
+      @include boxShadow();
+      width: 85%;
+      height: 90%;
+      position: relative;
+      z-index: 999;
+      text-align: center;
+      margin: 0 auto;
+      @include scrMed {
+        width: 95%;
+      }
+      img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      .overlay
+      {
+        @include overlay(1, #201313, .6);
+        @include posCenter(99.05%, 99.05%);
+      }
+      .box-run
+      {
+        background-color: red;
+        border-radius: 50%;
+        padding: 10px;
+        @include posCenter(14%, "");
+        z-index: 8;
+        cursor: pointer;
+        img
+        {
+          width: 100%;
+          position: relative;
+          z-index: 2;
+        }
+        .overlay-animaton
+        {
+          @include posCenter("", "");
+          border-radius: 50%;
+          z-index: 1;
+          &:first-of-type
+          {
+            width: 100%;
+            height: 100%;
+            background-color: $blue;
+          }
+          &:nth-of-type(2)
+          {
+            width: 100%;
+            height: 100%;
+            background-color: #2790cda1;
+            animation: 2.5s iconScale infinite linear;
+
+          }
+          &:nth-of-type(3)
+          {
+            width: 100%;
+            height: 100%;
+            background-color: #2790cda1;
+            animation: 3s iconScale2 infinite linear;
+            animation-delay: 0.5;
+          }
+        }
+      }
+    }
+  }
+  .popup-video
+  {
+    background-color: rgba(49, 47, 77, 0.712);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 999999999999999999;
+    div
+    {
+
+      background-color: #FFF;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 50%;
+      height: 70%;
+      @include boxShadow();
+    }
+    display: none;
+  }
+}
+
+@include animate(iconScale) 
+{
+  0% 
+  {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    opacity:.4;
+  }
+  
+  50%
+  {
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+    opacity:.7;
+  }
+
+  80%
+  {
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+    opacity:.5;
+  }
+
+  100%
+  {
+    opacity:.0;
+  }
+}
+
+@include animate(iconScale2) 
+{
+  0% 
+  {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    opacity:.4;
+  }
+  
+  50%
+  {
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+    opacity:.7;
+  }
+
+  80%
+  {
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+    opacity:.5;
+  }
+
+  100%
+  {
+    opacity:.0;
+  }
+}
+/* End About */

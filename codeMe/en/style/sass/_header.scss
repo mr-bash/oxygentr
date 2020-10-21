@@ -1,0 +1,393 @@
+
+/* Start Header */
+header 
+{
+  .top-nav 
+  {
+    background-color: #FFF;
+    position: relative;
+    overflow: hidden;
+    padding: 6px 0 8px; 
+    &::after
+    {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $navHover;
+    }
+    .brand
+    {
+      width: 90px;
+      display: inline-block;
+      img {
+        width: 100%;
+      }
+    }
+    .social-media
+    {
+      display: inline-block;
+      margin: {
+        left: 50px;
+      }
+      transform: translateY(2px);
+      text-align: center;
+      a
+      {
+        display: inline-block;
+        color: #ffffff;
+        font-size: 14px;
+        margin: 0 8px;
+        background-color: rgba(75, 72, 72, 0.753);
+        width: 26px;
+        height: 26px;
+        line-height: 28px;
+        @include transition(.1);
+        @include scrMed 
+        {
+          font-size: 17px;
+          margin: 0 6px;
+        }
+        &:first-of-type:hover
+        {
+          background-color: #516fa3;
+        }
+        &:nth-of-type(2):hover
+        {
+          background-color: #dc3e81;
+        }
+        &:nth-of-type(3):hover
+        {
+          background-color: #bb413e;
+        }
+        &:nth-of-type(4):hover
+        {
+          background-color: #4eb8ec;
+        }
+      }
+      @include scrMed 
+      {
+        float: right;
+        margin-top: 5px;
+      }
+    }
+    .blockquote
+    {
+      margin: 0;
+      float: right;
+      color: $blue;
+      @include scrMed 
+      {
+        display: none;
+      }
+      margin-top: 9px; 
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+    .call-direct
+    {
+      position: fixed;
+      bottom: 50px;
+      left: 33px;
+      z-index: 9999999999999;
+      opacity: 0.9;
+      background: #6cb463;
+      display: block;
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 37px;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      -webkit-transition: .1s ease-in-out;
+      -o-transition: .1s ease-in-out;
+      transition: .1s ease-in-out;
+      @include scrMed 
+      {
+        height: 40px;
+        width: 40px;
+        line-height: 42px;
+        font-size: 32px;
+        bottom: 110px;
+        right: auto;
+        left: 5px;
+      }
+      a
+      {
+        text-decoration: none;
+        color: #FFF;
+      }
+      &:hover
+      {
+        cursor: pointer;
+        color: #1dc241;
+        opacity: 1;
+      }
+    }
+  }
+  .cover
+  {
+    position: relative;
+    height: 100vh;
+    .bg
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+      height: 100%;
+    }
+    .bg1
+    {
+      @include bg("../images/home1.jpg", center center);
+    }
+    .bg2
+    {
+      @include bg("../images/home2.jpg", center center);
+      
+    }
+    .bg3
+    {
+      @include bg("../images/home3.jpg", center center);
+    }
+    nav
+    {
+      position: relative;
+      z-index: 2;
+      background-color: #371f2ca2;
+      text-align: center;
+      padding: 17px 0 1px;
+      @include scrMed 
+      {
+        background-color: rgba(46, 42, 88, 0.671);
+        padding: 25px 0 20px;
+        height: 86px;
+      }
+      .menu-bar 
+      {
+        background-color: #FFF;
+        padding: 4px 0;
+        width: 42px;
+        height: 41px;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        display: none;
+        float: left;
+        @include scrMed 
+        {
+          display: block;
+        }
+        span.bar
+        {
+          display: block;
+          width: 26px;
+          height: 3px;
+          text-align: center;
+          background-color: #544b9b;
+          margin: 6px auto;
+          @include transition(.4);
+        }
+      }
+      .blockquote
+      {
+        float: right;
+        display: none;
+        color: #FFF;
+        margin-top: 3px;
+        font-size: 18px;
+        @include scrMed 
+        {
+          display: block;
+        }
+      }
+      .transformed
+      {
+        background-color: #FFF;
+        span.bar
+        {
+          background-color: #544b9b;
+        }
+        span.bar:first-of-type
+        {
+          -webkit-transform: rotate(44deg) translateY(7.5px) translateX(48%);
+          -ms-transform: rotate(44deg) translateY(7.5px) translateX(48%);
+          transform: rotate(44deg) translateY(7.5px) translateX(48%);
+          height: 2px;
+          width: 15px;
+        }
+        span.bar:nth-of-type(2)
+        {
+          opacity: 0;
+        }
+        span.bar:last-of-type
+        {
+          -webkit-transform: rotate(-46deg) translateY(-5px) translateX(30%);
+          -ms-transform: rotate(-46deg) translateY(-5px) translateX(30%);
+          transform: rotate(-46deg) translateY(-5px) translateX(30%);
+          height: 2px;
+          width: 15px;
+        }
+      }
+      ul
+      {
+        @include scrMed 
+        {
+          background-color: rgba(46, 42, 88, 0.95);
+          position: absolute;
+          top: 86px;
+          left: 0;
+          width: 100%;
+          display: none;
+          z-index: 999999;
+        }
+        li
+        {
+          a
+          {
+            margin: 0 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #FFF;
+            text-decoration: none;
+            &:hover,
+            &.active
+            {
+              text-decoration: none;
+              color: $navHover;
+              @include scrMed 
+              {
+                background-color: #FFF;
+              }
+            }
+            @include scrMed 
+            {
+              display: block;
+              padding: 12px 0;
+              margin: 0;
+              &:hover
+              {
+                background-color: #FFF;
+              }
+            }
+          }
+        }
+      }
+    }
+    .overlay
+    {
+      @include overlay(1, #DDD, .5);
+      @include colorGr();
+      @include opc(.7);
+    }
+    .box-content
+    {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 750px;
+      max-width: 80%;
+      color: #FFF;
+      z-index: 1;
+      text-align: center;
+      h1
+      {
+        text-transform: uppercase;
+        text-align: #{$left};
+        font: {
+          size: 42px;
+          weight: bold; 
+        }
+        @include scrMed 
+        {
+          font-size: 28px;
+        }
+        span
+        {
+          display: inline-block;
+          background-color: $blue;
+          padding: 8px;
+          @include scrMed 
+          {
+            padding: 6px;
+          }
+        }
+      }
+      p
+      {
+        font: {
+          size: 18px;
+          weight: 300;
+        }
+        line-height: 1.6;
+        text-align: #{$left};
+        margin-bottom: 20px;
+        @include scrMed 
+        {
+          font-size: 16px;
+        }
+      }
+      a
+      {
+        @include button("white");
+      }
+    }
+    .home1
+    {
+      opacity: 1;
+      // z-index: 3;
+    }
+    .home2
+    {
+      opacity: 0;
+      // z-index: 2;
+      display: none;
+    }
+    .home3
+    {
+      opacity: 0;
+      // z-index: 1;
+      display: none;
+    }
+    .selector
+    {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      z-index: 999;
+      cursor: pointer;
+      span
+      {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #FFF;
+        border-radius: 50%;
+        @include transition(.1);
+        &:not(:first-of-type)
+        {
+          margin: 13px 0;
+        }
+        &.active,
+        &:hover
+        {
+          background-color: $blue;
+          border: {
+            color: $blue;
+          }
+        }
+      }
+      @include scrMed 
+      {
+        display: none;
+      }
+    }
+  }
+}
+/* End Header */

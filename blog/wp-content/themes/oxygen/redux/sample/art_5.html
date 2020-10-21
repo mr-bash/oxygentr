@@ -1,0 +1,67 @@
+    <style type="text/css">
+    /*
+    Parallax Experiment
+    Date: 2nd April 2009
+    Author: Paul Hayes
+    */
+    * {
+        margin: 0; padding: 0;
+    }
+
+    #infoSample {
+    position: relative;
+    overflow: hidden;
+    margin: 0; padding: 0;
+    }
+
+    #infoSample #background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transition: left 300s linear;
+    -moz-transition: left 300s linear;
+    -o-transition: left 300s linear;
+    -ms-transition: left 300s linear;
+    transition: left 300s linear;
+    }
+
+    #infoSample #experiment:target #background {
+    left: -5000px;
+    }
+
+    #infoSample #experiment:hover #background {
+    left: -9999px;
+    }
+
+    #infoSample #content {
+    margin: 0px 10px;
+    background-color: #8379aa;
+    opacity: 0.95;
+    color:  #fff;
+    padding: 3em;
+    border: 2px solid #c0bfc6;
+    text-align: center;
+    }
+
+    #h_2 {
+    color:  #fff;
+    text-align: center;
+    font-family: 'Omar', 'sans-serif';
+    font-size: 14px;
+    }
+
+    </style>
+    <div id="infoSample">
+        <div class="wrapper">
+            <div id="experiment">
+                <div id="background"></div>
+
+                <div id="content">
+                    <img src="img/5.jpg" alt="">
+                    <h2 id="h_2">اللون الأحمر يمثل مكان المقالة في الترويسة</h2>
+                </div>
+            </div>
+        </div>
+    </div>
